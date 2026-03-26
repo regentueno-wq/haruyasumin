@@ -279,7 +279,7 @@ function renderCalendar() {
   else if(diff===0)r.innerHTML=`<span>きょうが さいごのひ！</span> がんばれ！`;
   else r.innerHTML=`<span>はるやすみ おわり！</span> おつかれさま！`;
 }
-function init() { renderCalendar(); renderTasks(); updateCharacter(); updateStatusBar(); restoreFloorItems(); }
+function init() { state.stageIndex=getCurrentStage(); saveState(); renderCalendar(); renderTasks(); updateCharacter(); updateStatusBar(); restoreFloorItems(); }
 init();
 </script>
 </body>
